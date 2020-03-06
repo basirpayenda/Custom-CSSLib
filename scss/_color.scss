@@ -1,0 +1,105 @@
+/* favorite colors */
+
+/* light colors */
+$default: #f7f7f7;
+$grey: #767c81;
+$secondary: #292b2c;
+$whitish: #f3f3f3;
+$blue-light: #f4f7fc;
+$yellow-light: #fce;
+$black-light: #333333;
+$green-light: #d3eda3;
+$red-light: #f5ab9e;
+$purple-light: #ddaeff;
+$orange-light: #f57b00;
+$indigo-light: #0085c6;
+
+/* bold colors */
+$blue: #1f8dd6;
+$black: #0a0a0a;
+$purple: #8058a5;
+$green: #5eb95e;
+$red: #dd514c;
+$orange: #f37b1d;
+$yellow: #fad232;
+
+/* Social media colors */
+$google-clr: #db4437;
+$google-plus-clr: rgb(221, 75, 57);
+$fb-clr: rgb(59, 89, 153);
+$twitter-clr: rgb(85, 172, 238);
+$quora-clr: rgb(185, 43, 39);
+$medium-clr: rgb(2, 184, 117);
+$instagram-clr: rgb(228, 64, 95);
+$dribble-clr: rgb(234, 76, 137);
+$snapchat-clr: rgb(255, 252, 0);
+
+/* color-text */
+.default-text {
+  color: $default !important;
+}
+.blue-text {
+  color: $blue !important;
+}
+.grey-text {
+  color: $grey !important;
+}
+.yellow-text {
+  color: $yellow !important;
+}
+.black-text {
+  color: $black !important;
+}
+.green-text {
+  color: $green !important;
+}
+.red-text {
+  color: $red !important;
+}
+.purple-text {
+  color: $purple !important;
+}
+.orange-text {
+  color: $orange !important;
+}
+.whitish-text {
+  color: $whitish !important;
+}
+
+/* color-bg */
+.default-bg {
+  background-color: $default !important;
+}
+.grey-bg {
+  background-color: $grey !important;
+}
+.light-blue-bg{
+  background-color: $blue-light;
+}
+.blue-bg {
+  background-color: $blue-light !important;
+}
+.yellow-bg {
+  background-color: $yellow-light !important;
+}
+.black-bg {
+  background-color: $black-light !important;
+}
+.green-bg {
+  background-color: $green-light !important;
+}
+.red-bg {
+  background-color: $red-light !important;
+}
+.purple-bg {
+  background-color: $purple-light !important;
+}
+.orange-bg {
+  background-color: $orange-light !important;
+}
+.indigo-bg {
+  background-color: $indigo-light !important;
+}
+.whitish-bg {
+  background-color: $whitish !important;
+}

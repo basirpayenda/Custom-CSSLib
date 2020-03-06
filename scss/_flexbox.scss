@@ -1,0 +1,138 @@
+/* flex */
+.flex {
+  display: flex !important;
+}
+.flex-center {
+  justify-content: center !important;
+  align-items: center !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+
+/* flex-direction */
+.flex-dir-row {
+  flex-direction: row !important;
+}
+.flex-dir-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-dir-col {
+  flex-direction: column !important;
+}
+.flex-dir-col-reverse {
+  flex-direction: column-reverse !important;
+}
+
+/* justify-content */
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+/* align-items */
+.align-items-start {
+  align-items: flex-start !important;
+}
+.align-items-end {
+  align-items: flex-end !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.align-items-baseline {
+  align-items: baseline !important;
+}
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+/* flex-grow */
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+/* flex-wrap */
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+/* layouting */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* align content */
+.align-content-start {
+  align-content: flex-start !important;
+}
+.align-content-end {
+  align-content: flex-end !important;
+}
+.align-content-center {
+  align-content: center !important;
+}
+.align-content-between {
+  align-content: space-between !important;
+}
+.align-content-around {
+  align-content: space-around !important;
+}
+
+/* align self */
+.align-self-start {
+  align-self: flex-start !important;
+}
+.align-self-end {
+  align-self: flex-end !important;
+}
+.align-self-center {
+  align-self: center !important;
+}
+.align-self-stretch {
+  align-self: stretch !important;
+}
+
+/* order flex items */
+.order-first {
+  order: 0 !important;
+}
+.order-second {
+  order: 1 !important;
+}
+.order-third {
+  order: 2 !important;
+}
+.order-fourth {
+  order: 3 !important;
+}
+.order-fifth {
+  order: 4 !important;
+}
+.order-sixth {
+  order: 5 !important;
+}
