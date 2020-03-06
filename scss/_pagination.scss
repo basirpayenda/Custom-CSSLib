@@ -1,0 +1,38 @@
+.pages {
+  display: flex;
+  list-style-type: none;
+  font-family: verdana, sans-serif;
+  border-radius: 3px;
+  justify-content: end;
+  li {
+    a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      color: #1f8dd6;
+      text-decoration: none;
+      border: 1px solid #dedede;
+      border-left: none;
+      &:hover {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+  li:first-child {
+    a {
+      border-left: 1px solid #dedede;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+  li:last-child {
+    a {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .active {
+    background-color: #1f8dd6;
+    color: #f3f3f3;
+    &:hover {
+      background-color: #1f8dd6;
+    }
+  }
+}

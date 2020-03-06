@@ -1,0 +1,50 @@
+.tablet {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 0.825rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: default;
+  text-align: center;
+}
+.tablet-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.65rem;
+  line-height: 0.9;
+}
+
+.red {
+  background-color: $quora-clr;
+  color: $default;
+}
+
+.blue {
+  background-color: $fb-clr;
+  color: $default;
+}
+
+.green {
+  background-color: $medium-clr;
+  color: $default;
+}
+
+.black {
+  background-color: $secondary;
+  color: $default;
+}
+
+.yellow {
+  background-color: rgb(228, 214, 17);
+}
+
+.orange {
+  background-color: $orange;
+  color: #ffffff;
+}
+
+.default {
+  background-color: #e0d7d7;
+  color: $secondary;
+}

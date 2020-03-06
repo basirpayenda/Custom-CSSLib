@@ -5,11 +5,13 @@
   outline: none;
   cursor: pointer;
   font-size: 1rem;
+  line-height: 1;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 .button-small {
   padding: 0.5rem 1.75rem;
 }
+
 .button-large {
   padding: 1rem 3rem;
   font-size: 1.25rem;
@@ -22,14 +24,14 @@
   font-size: 1.1rem;
 }
 
-.red {
+.button-red {
   background-color: $quora-clr;
   color: $default;
   &:hover {
     background-color: rgb(150, 31, 26);
   }
 }
-.red-o {
+.button-red-o {
   border: 1px solid $quora-clr;
   background-color: #ffffff;
   color: $quora-clr;
@@ -39,14 +41,14 @@
   }
 }
 
-.blue {
+.button-blue {
   background-color: $fb-clr;
   color: $default;
   &:hover {
     background-color: rgb(36, 63, 122);
   }
 }
-.blue-o {
+.button-blue-o {
   border: 1px solid $fb-clr;
   background-color: #ffffff;
   color: $fb-clr;
@@ -56,7 +58,7 @@
   }
 }
 
-.green {
+.button-green {
   background-color: $medium-clr;
   color: $default;
   &:hover {
@@ -64,7 +66,7 @@
   }
 }
 
-.green-o {
+.button-green-o {
   border: 1px solid $medium-clr;
   background-color: #ffffff;
   color: $medium-clr;
@@ -74,14 +76,14 @@
   }
 }
 
-.black {
+.button-black {
   background-color: $secondary;
   color: $default;
   &:hover {
     background-color: #0f0f0f;
   }
 }
-.black-o {
+.button-black-o {
   border: 1px solid $secondary;
   background-color: #ffffff;
   color: $secondary;
@@ -91,33 +93,21 @@
   }
 }
 
-.yellow {
+.button-yellow {
   background-color: rgb(228, 214, 17);
   &:hover {
     background-color: rgb(184, 173, 19);
   }
 }
 
-/* 
-.yellow-o {
-  border: 1px solid rgb(151, 143, 24);
-  background-color: #ffffff;
-  color: rgb(151, 143, 24);
-  &:hover {
-    background-color: rgb(228, 214, 17);
-    color: $default;
-  }
-} 
-*/
-
-.orange {
+.button-orange {
   background-color: $orange;
   color: #ffffff;
   &:hover {
     background-color: #c26620;
   }
 }
-.orange-o {
+.button-orange-o {
   border: 1px solid $orange;
   background-color: #ffffff;
   color: $orange;
@@ -127,13 +117,14 @@
   }
 }
 
-.default {
+.button-default {
   background-color: #e0d7d7;
+  color: $secondary;
   &:hover {
     background-color: #b9afaf;
   }
 }
-.default-o {
+.button-default-o {
   border: 1px solid #8c9aa0;
   background-color: #ffffff;
   color: #8c9aa0;
