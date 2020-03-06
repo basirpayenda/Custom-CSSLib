@@ -2,17 +2,17 @@
 
 /* light colors */
 $default: #f7f7f7;
+
 $grey: #767c81;
 $secondary: #292b2c;
 $whitish: #f3f3f3;
-$blue-light: #f4f7fc;
-$yellow-light: #fce;
+$blue-light: #0085c6;
+$yellow-light: rgb(245, 238, 141);
 $black-light: #333333;
 $green-light: #d3eda3;
 $red-light: #f5ab9e;
 $purple-light: #ddaeff;
 $orange-light: #f57b00;
-$indigo-light: #0085c6;
 
 /* bold colors */
 $blue: #1f8dd6;
@@ -29,6 +29,7 @@ $google-plus-clr: rgb(221, 75, 57);
 $fb-clr: rgb(59, 89, 153);
 $twitter-clr: rgb(85, 172, 238);
 $quora-clr: rgb(185, 43, 39);
+$red: rgb(185, 43, 39);
 $medium-clr: rgb(2, 184, 117);
 $instagram-clr: rgb(228, 64, 95);
 $dribble-clr: rgb(234, 76, 137);
@@ -73,7 +74,7 @@ $snapchat-clr: rgb(255, 252, 0);
 .grey-bg {
   background-color: $grey !important;
 }
-.light-blue-bg{
+.light-blue-bg {
   background-color: $blue-light;
 }
 .blue-bg {
@@ -84,6 +85,7 @@ $snapchat-clr: rgb(255, 252, 0);
 }
 .black-bg {
   background-color: $black-light !important;
+  color: $default;
 }
 .green-bg {
   background-color: $green-light !important;
@@ -96,10 +98,9 @@ $snapchat-clr: rgb(255, 252, 0);
 }
 .orange-bg {
   background-color: $orange-light !important;
+  color: $default;
 }
-.indigo-bg {
-  background-color: $indigo-light !important;
-}
+
 .whitish-bg {
   background-color: $whitish !important;
 }

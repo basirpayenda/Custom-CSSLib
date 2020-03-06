@@ -43,7 +43,7 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 }
-/* [ .image, .size-200, .size-300, .size-400 ] */
+/* [ .image, .circle, .thumbnail-image .size-200, .size-300, .size-400 ] */
 .image {
   max-width: 100%;
   height: auto;
@@ -51,6 +51,19 @@
   border-radius: 8px;
   box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
     0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.thumbnail-image {
+  padding: 3px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  &:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
 }
 
 .size-200 {
@@ -99,4 +112,103 @@
 }
 .heading-3 {
   font-size: 3rem;
+}
+
+/********************************* table ************************************/
+.table {
+  font-family: sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #dddddd;
+  thead tr {
+    border-bottom: 2px solid #dddddd;
+    text-align: left;
+  }
+  thead.thead-dark tr {
+    background-color: #0a0a0a;
+    color: #f3f3f3;
+  }
+  th {
+    font-weight: bold;
+  }
+  td,
+  th {
+    padding: 0.75rem;
+  }
+  td {
+    border: 1px solid #e1e1e1;
+  }
+}
+
+.table.bar {
+  tr:nth-child(even) {
+    border-top: 1px solid #d4d1d1;
+    background-color: #f2f2f2;
+  }
+  td {
+    border: none;
+  }
+}
+/************************* VIN (Very Important Note) ******************************/
+/* vin identical to jumbotron */
+.vin {
+  padding: 3rem;
+  background-color: $blue-light;
+  border-radius: 7px;
+  font-size: 110%;
+}
+
+@media screen and (max-width: 576px) {
+  .vin {
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .vin {
+    padding: 4rem;
+  }
+}
+/************************* alert (Very Important Note) ******************************/
+.message {
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  color: #384e38;
+  font-weight: 300;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: #384e389d;
+    cursor: pointer;
+    &:hover {
+      color: #384e38fa;
+    }
+  }
+}
+
+.message-success {
+  background-color: #d3eda3c0;
+  border: 1px solid #76c97693;
+}
+.message-danger {
+  background-color: #f5ab9e8a;
+  border: 1px solid #c7807341;
+}
+.message-warning {
+  background-color: rgba(245, 238, 141, 0.719);
+  border: 1px solid rgba(189, 183, 100, 0.794);
+}
+.message-default {
+  background-color: $blue-light;
+  border: 1px solid #cec8c8c9;
+}
+.message-primary {
+  background-color: #1f8dd61f;
+  border: 1px solid #cec8c878;
 }

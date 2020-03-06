@@ -1,0 +1,144 @@
+.button {
+  padding: 0.75rem 2rem;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+.button-small {
+  padding: 0.5rem 1.75rem;
+}
+.button-large {
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+}
+
+.button-full {
+  display: block;
+  margin: 0.5rem 0;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.red {
+  background-color: $quora-clr;
+  color: $default;
+  &:hover {
+    background-color: rgb(150, 31, 26);
+  }
+}
+.red-o {
+  border: 1px solid $quora-clr;
+  background-color: #ffffff;
+  color: $quora-clr;
+  &:hover {
+    background-color: rgb(150, 31, 26);
+    color: $default;
+  }
+}
+
+.blue {
+  background-color: $fb-clr;
+  color: $default;
+  &:hover {
+    background-color: rgb(36, 63, 122);
+  }
+}
+.blue-o {
+  border: 1px solid $fb-clr;
+  background-color: #ffffff;
+  color: $fb-clr;
+  &:hover {
+    background-color: rgb(36, 63, 122);
+    color: $default;
+  }
+}
+
+.green {
+  background-color: $medium-clr;
+  color: $default;
+  &:hover {
+    background-color: rgb(22, 145, 100);
+  }
+}
+
+.green-o {
+  border: 1px solid $medium-clr;
+  background-color: #ffffff;
+  color: $medium-clr;
+  &:hover {
+    background-color: rgb(22, 145, 100);
+    color: $default;
+  }
+}
+
+.black {
+  background-color: $secondary;
+  color: $default;
+  &:hover {
+    background-color: #0f0f0f;
+  }
+}
+.black-o {
+  border: 1px solid $secondary;
+  background-color: #ffffff;
+  color: $secondary;
+  &:hover {
+    background-color: #0f0f0f;
+    color: $default;
+  }
+}
+
+.yellow {
+  background-color: rgb(228, 214, 17);
+  &:hover {
+    background-color: rgb(184, 173, 19);
+  }
+}
+
+/* 
+.yellow-o {
+  border: 1px solid rgb(151, 143, 24);
+  background-color: #ffffff;
+  color: rgb(151, 143, 24);
+  &:hover {
+    background-color: rgb(228, 214, 17);
+    color: $default;
+  }
+} 
+*/
+
+.orange {
+  background-color: $orange;
+  color: #ffffff;
+  &:hover {
+    background-color: #c26620;
+  }
+}
+.orange-o {
+  border: 1px solid $orange;
+  background-color: #ffffff;
+  color: $orange;
+  &:hover {
+    background-color: $orange;
+    color: $default;
+  }
+}
+
+.default {
+  background-color: #e0d7d7;
+  &:hover {
+    background-color: #b9afaf;
+  }
+}
+.default-o {
+  border: 1px solid #8c9aa0;
+  background-color: #ffffff;
+  color: #8c9aa0;
+  &:hover {
+    background-color: #8c9aa0;
+    color: $default;
+  }
+}
