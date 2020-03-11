@@ -1,0 +1,202 @@
+/************************************** 
+            navbar_container
+**************************************/
+// navbar_container Variables
+$nav-height: 60px;
+$nav-background: #563d7c;
+$white: #f3f3f3;
+$dd-line-height: 50px;
+
+// Outer navbar_container wrapper
+.navbar_container {
+  background: $nav-background;
+  padding: 0rem 1rem;
+  height: $nav-height;
+  z-index: 500;
+}
+.fixed_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: $nav-height;
+  .logo {
+    a {
+      color: $white;
+    }
+  }
+  nav {
+    .navbar_list {
+      display: block;
+      position: absolute;
+      top: $nav-height;
+      right: 0;
+      width: 0vw;
+      min-height: calc(100vh - 60px);
+      background-color: inherit;
+      transition: all 0.25s ease-out;
+      text-align: center;
+      list-style-type: none;
+      // incase of overflow
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      a {
+        color: #ada2bd;
+        line-height: $nav-height;
+        padding: 1.25rem 0;
+        &:hover {
+          color: $white;
+        }
+      }
+      li:hover a {
+        // magic
+        color: $white;
+      }
+      .dropdown {
+        .dropdown_list {
+          a {
+            color: #0a0a0a;
+            line-height: $dd-line-height; // important
+          }
+          li {
+            &:hover {
+              background-color: #f8f9fa;
+            }
+          }
+        }
+      }
+    }
+    .toggle_navbar {
+      width: 50vw;
+    }
+  }
+}
+
+.nav_toggler {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 15px;
+    height: 5px;
+    width: 35px;
+    background: $white;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+    box-shadow: inset 0 0 3px #444;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    box-shadow: none;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/******************************* 
+        Nav Dropdowns
+*******************************/
+.dropdown {
+  position: relative;
+  overflow: hidden;
+  .dropdown_list {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 4px;
+    max-height: 0;
+    background-color: #ffffff;
+    list-style: none;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 2px 1px #777;
+  }
+  .show_dropdown {
+    max-height: 350px;
+  }
+}
+/******************************************************************** 
+                Responsive Nav
+********************************************************************/
+@media screen and (min-width: 768px) {
+  .nav_toggler {
+    display: none;
+  }
+  .navbar_container {
+    padding: 0;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    .logo {
+      display: flex;
+      justify-content: center;
+      padding-left: 1rem;
+    }
+    nav {
+      .navbar_list {
+        position: static;
+        display: flex;
+        justify-content: center;
+        min-height: $nav-height;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        top: 0;
+        // fixing overflow back, in bigger screen
+        max-height: $nav-height;
+        overflow-y: initial;
+        li {
+          a {
+            padding: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  /* dropdown */
+  .dropdown {
+    position: relative;
+    overflow: initial;
+    white-space: nowrap;
+    .dropdown_list {
+      position: absolute; // magical importance
+      display: none;
+      background-color: #ffffff;
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
+      margin-top: -7px;
+      left: -0.3rem;
+      width: auto;
+    }
+    .show_dropdown {
+      display: block;
+      height: auto;
+    }
+  }
+}

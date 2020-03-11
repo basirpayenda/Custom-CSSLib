@@ -25,6 +25,8 @@
   display: flex;
   display: ms-flex;
   flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .extra-small-1,
@@ -196,7 +198,7 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 994px;
+    max-width: 740px;
   }
   /* column */
   .medium-1 {

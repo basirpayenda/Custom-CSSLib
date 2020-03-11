@@ -14,6 +14,10 @@ body {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /* @imports */
 @import "color";
 @import "config";
@@ -24,6 +28,8 @@ body {
 @import "button";
 @import "tablet";
 @import "pagination";
+@import "carousel";
+@import "nav";
 
 .mx-auto {
   margin: 0 auto;

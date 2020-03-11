@@ -3,7 +3,7 @@
 /* light colors */
 $default: #f7f7f7;
 
-$grey: #767c81;
+$gray: #e9ecef;
 $secondary: #292b2c;
 $whitish: #f3f3f3;
 $blue-light: #0085c6;
@@ -42,8 +42,8 @@ $snapchat-clr: rgb(255, 252, 0);
 .blue-text {
   color: $blue !important;
 }
-.grey-text {
-  color: $grey !important;
+.gray-text {
+  color: $gray !important;
 }
 .yellow-text {
   color: $yellow !important;
@@ -71,8 +71,8 @@ $snapchat-clr: rgb(255, 252, 0);
 .default-bg {
   background-color: $default !important;
 }
-.grey-bg {
-  background-color: $grey !important;
+.gray-bg {
+  background-color: $gray !important;
 }
 .light-blue-bg {
   background-color: $blue-light;

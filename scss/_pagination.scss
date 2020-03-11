@@ -1,4 +1,4 @@
-.pages {
+.paginator {
   display: flex;
   list-style-type: none;
   font-family: verdana, sans-serif;
@@ -29,10 +29,12 @@
     }
   }
   .active {
-    background-color: #1f8dd6;
-    color: #f3f3f3;
-    &:hover {
+    a {
       background-color: #1f8dd6;
+      color: #f3f3f3;
+      &:hover {
+        background-color: #1f8dd6;
+      }
     }
   }
 }
