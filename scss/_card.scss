@@ -171,7 +171,7 @@
     padding: 4rem;
   }
 }
-/************************* alert (Very Important Note) ******************************/
+/************************* message(alert) ******************************/
 .message {
   position: relative;
   padding: 0.75rem 1rem;
@@ -213,4 +213,38 @@
 .message-primary {
   background-color: #1f8dd61f;
   border: 1px solid #cec8c878;
+}
+/************************* tab ******************************/
+/* Style the tab */
+.tab {
+  display: flex;
+  width: 100%;
+  background-color: #e8e8e7;
+  border: 1px solid #ccc;
+  margin-top: 0.75rem;
+  a {
+    padding: 1rem;
+    width: 120px;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #222;
+    &:hover {
+      background-color: #e2e2e2;
+    }
+  }
+  .active {
+    background-color: #cdcdcd;
+  }
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
 }

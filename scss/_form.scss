@@ -1,0 +1,123 @@
+label {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+}
+.input-wrapper,
+.toggle-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+  user-select: none;
+  .input-text {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    color: #24292e;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+    &:focus {
+      color: #495057;
+      background-color: #fff;
+      border-color: rgba(35, 126, 187, 0.603);
+      box-shadow: 0 0 0 0.2rem rgba(35, 126, 187, 0.151);
+      outline: 0;
+    }
+  }
+  .toggle-wrapper {
+    padding-left: 45px;
+    .toggle_box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35px;
+      height: 19px;
+      background-color: rgba(35, 126, 187, 0.74);
+      border-radius: 1rem;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 13px;
+        height: 13px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    input[type="checkbox"] {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ .toggle_box:after {
+      left: 18px;
+    }
+  }
+}
+
+.checked-wrapper {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  line-height: 1.25;
+  user-select: none;
+  border-radius: 2px;
+  &:hover .chexbox_box,
+  &:hover .radio_box {
+    background-color: rgba(7, 102, 165, 0.883);
+  }
+
+  label {
+    margin: 0;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  input[type="checkbox"]:checked ~ .chexbox_box:after,
+  input[type="radio"]:checked ~ .radio_box:after {
+    display: block;
+  }
+  .chexbox_box,
+  .radio_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(35, 126, 187, 0.74);
+  }
+  .radio_box {
+    border-radius: 50%;
+  }
+  .chexbox_box:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    height: 9px;
+    width: 4px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .radio_box:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}

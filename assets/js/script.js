@@ -1,4 +1,4 @@
-/*********************** navbar ***********************/
+/*********************************** navbar **********************************/
 /*  navbar variables */
 let links = document.querySelectorAll("nav ul li a:not(:only-child)");
 let burger = document.querySelector(".nav_toggler");
@@ -41,7 +41,7 @@ window.onclick = function(e) {
   }
 };
 
-/*********************** messages ***********************/
+/*********************************** messages **************************************/
 let close_btn = [...document.getElementsByClassName("close")];
 
 close_btn.forEach(close => {
@@ -54,7 +54,7 @@ close_btn.forEach(close => {
   });
 });
 
-/************************* carousel **************************/
+/************************************** carousel ***********************************/
 const carousel_slide = document.querySelector(".carousel-inner");
 const carousel_images = document.querySelectorAll(".slide-item");
 
@@ -130,3 +130,18 @@ dot.forEach(function(e, i) {
     carousel_slide.style.transform = `translateX(${-size * (counter + 1)}px)`;
   });
 });
+/***************************** tab ***********************************/
+function openTab(event, elem) {
+  tab_content = [...document.getElementsByClassName("tab-content")];
+  tab_content.forEach(tab => {
+    tab.style.display = "none";
+  });
+  active_tabs = [...document.querySelectorAll(".active")];
+  active_tabs.forEach(tab => {
+    tab.className = tab.className.replace(" active", "");
+  });
+  document.getElementById(elem).style.display = "block";
+  event.currentTarget.className += " active";
+}
+
+document.getElementById("default").click();

@@ -63,12 +63,12 @@
     </header>
     <br><br>
     <br>
-    <main class="container">
+    <main class="container mgb-3">
         <!-- <div class="message message-primary">
             <span class="close">&times;</span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, aut.
         </div> -->
-        <!-- carousel starts -->
+        <!----------------------------- carousel  ----------------------------------->
         <div class="carousel">
             <i class="fas fa-chevron-left" id="prevBtn"></i>
             <i class="fas fa-chevron-right" id="nextBtn"></i>
@@ -157,9 +157,10 @@
 
         </div>
         <!-- carousel ends -->
-
+        <!----------------------------- .image  ----------------------------------->
         <img src="https://images.unsplash.com/photo-1549876612-f9ea53d45266?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
             alt="random photo" class="image width-100">
+        <!----------------------------- .vin  ----------------------------------->
         <div class="vin">
             <h2 class="heading-2">Heading 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem quae officiis aliquam culpa
@@ -169,6 +170,33 @@
                 odio beatae deserunt expedita consequuntur. Aliquid ut nemo quidem magnam. Accusantium ipsa
                 exercitationem quod expedita delectus.</p>
         </div>
+
+        <!----------------------------- .tab  ----------------------------------->
+        <h2>Tabs</h2>
+        <p>Click on the x button in the top right corner to close the current tab:</p>
+
+        <div class="tab">
+            <a onclick='openTab(event, "javascript")'>JavaScript</a>
+            <a onclick='openTab(event, "python")' id='default'>Python</a>
+            <a onclick='openTab(event, "django")'>Django</a>
+        </div>
+        
+        <div class="tab-contents">
+            <div id="javascript" class='tab-content'>
+                <h1>JavaScript</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
+            </div>
+        
+            <div id="python" class='tab-content'>
+                <h1>Python</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
+            </div>    
+        
+            <div id="django" class='tab-content'>
+                <h1>Django</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
+            </div>   
+        </div>        
     </main>
 
 

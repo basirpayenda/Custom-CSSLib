@@ -305,7 +305,7 @@ a {
   }
 }
 
-/************************* alert (Very Important Note) ******************************/
+/************************* message(alert) ******************************/
 .message {
   position: relative;
   padding: 0.75rem 1rem;
@@ -354,6 +354,46 @@ a {
   border: 1px solid #cec8c878;
 }
 
+/************************* tab ******************************/
+/* Style the tab */
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #e8e8e7;
+  border: 1px solid #ccc;
+  margin-top: 0.75rem;
+}
+
+.tab a {
+  padding: 1rem;
+  width: 120px;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #222;
+}
+
+.tab a:hover {
+  background-color: #e2e2e2;
+}
+
+.tab .active {
+  background-color: #cdcdcd;
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 h1,
 h2,
 h3,
@@ -362,26 +402,6 @@ h5 {
   font-weight: 800;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin: 0.5rem 0;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-h2 {
-  font-size: 4rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.5rem;
 }
 
 a {
@@ -1039,7 +1059,7 @@ border
   }
 }
 
-/************************* alert (Very Important Note) ******************************/
+/************************* message(alert) ******************************/
 .message {
   position: relative;
   padding: 0.75rem 1rem;
@@ -1088,6 +1108,46 @@ border
   border: 1px solid #cec8c878;
 }
 
+/************************* tab ******************************/
+/* Style the tab */
+.tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #e8e8e7;
+  border: 1px solid #ccc;
+  margin-top: 0.75rem;
+}
+
+.tab a {
+  padding: 1rem;
+  width: 120px;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #222;
+}
+
+.tab a:hover {
+  background-color: #e2e2e2;
+}
+
+.tab .active {
+  background-color: #cdcdcd;
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 .button {
   padding: 0.75rem 2rem;
   border-radius: 3px;
@@ -1096,6 +1156,7 @@ border
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
+  text-align: center;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
@@ -1799,6 +1860,271 @@ border
     display: block;
     height: auto;
   }
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+}
+
+.input-wrapper,
+.toggle-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.input-wrapper .input-text,
+.toggle-wrapper .input-text {
+  min-height: 34px;
+  padding: 6px 8px;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  color: #24292e;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  outline: none;
+  -webkit-box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+          box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+}
+
+.input-wrapper .input-text:focus,
+.toggle-wrapper .input-text:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(35, 126, 187, 0.603);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(35, 126, 187, 0.151);
+          box-shadow: 0 0 0 0.2rem rgba(35, 126, 187, 0.151);
+  outline: 0;
+}
+
+.input-wrapper .toggle-wrapper,
+.toggle-wrapper .toggle-wrapper {
+  padding-left: 45px;
+}
+
+.input-wrapper .toggle-wrapper .toggle_box,
+.toggle-wrapper .toggle-wrapper .toggle_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 19px;
+  background-color: rgba(35, 126, 187, 0.74);
+  border-radius: 1rem;
+}
+
+.input-wrapper .toggle-wrapper .toggle_box:after,
+.toggle-wrapper .toggle-wrapper .toggle_box:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-wrapper .toggle-wrapper input[type="checkbox"],
+.toggle-wrapper .toggle-wrapper input[type="checkbox"] {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+.input-wrapper .toggle-wrapper input[type="checkbox"]:checked ~ .toggle_box:after,
+.toggle-wrapper .toggle-wrapper input[type="checkbox"]:checked ~ .toggle_box:after {
+  left: 18px;
+}
+
+.checked-wrapper {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  line-height: 1.25;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 2px;
+}
+
+.checked-wrapper:hover .chexbox_box,
+.checked-wrapper:hover .radio_box {
+  background-color: rgba(7, 102, 165, 0.883);
+}
+
+.checked-wrapper label {
+  margin: 0;
+}
+
+.checked-wrapper input[type="checkbox"],
+.checked-wrapper input[type="radio"] {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+.checked-wrapper input[type="checkbox"]:checked ~ .chexbox_box:after,
+.checked-wrapper input[type="radio"]:checked ~ .radio_box:after {
+  display: block;
+}
+
+.checked-wrapper .chexbox_box,
+.checked-wrapper .radio_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(35, 126, 187, 0.74);
+}
+
+.checked-wrapper .radio_box {
+  border-radius: 50%;
+}
+
+.checked-wrapper .chexbox_box:after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  height: 9px;
+  width: 4px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checked-wrapper .radio_box:after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 450px;
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card .card-header {
+  position: relative;
+  height: 75%;
+  overflow: hidden;
+}
+
+.product-card .card-header .photo,
+.product-card .card-header .photo-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card .card-header .photo-cover {
+  opacity: 0;
+}
+
+.product-card .card-header:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.product-card .card-header:hover .photo-cover {
+  opacity: 1;
+}
+
+.product-card .card-body {
+  position: relative;
+  font-family: "Montserrat";
+  padding: 2rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25%;
+  color: #242424;
+}
+
+.product-card .card-body .product-name {
+  font-size: 1.5rem;
+  margin: 0.25rem 0;
+}
+
+.product-card .card-body .price {
+  margin: 0;
+  color: #5a5858;
+  font-weight: bold;
+}
+
+.product-card .card-body .cart-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #242424;
+  background-color: inherit;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.product-card .card-body .cart-btn:hover {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.product-card .card-body .cart-btn:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #0a0a0a;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.badge {
+  padding: 0.12rem 0.5rem;
+  font-size: 90%;
+  line-height: 1;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0.15rem 0.1rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
 }
 
 .mx-auto {
