@@ -52,6 +52,10 @@ border
 }
 
 /* padding and margin */
+.pd-0 {
+  padding: 0rem !important;
+}
+
 .pd-025 {
   padding: 0.25rem !important;
 }
@@ -74,6 +78,11 @@ border
 
 .pd-4 {
   padding: 4rem !important;
+}
+
+// padding on x-axis and y-axis
+.pdx-0 {
+  padding: 0 !important;
 }
 
 .pdx-025 {
@@ -100,6 +109,10 @@ border
   padding: 4rem 0 !important ;
 }
 
+.pdy-0 {
+  padding: 0 0rem !important;
+}
+
 .pdy-025 {
   padding: 0 0.25rem !important;
 }
@@ -122,6 +135,11 @@ border
 
 .pdy-4 {
   padding: 0 4rem !important;
+}
+
+// padding-bottom
+.pdb-0 {
+  padding-bottom: 0rem !important;
 }
 
 .pdb-025 {
@@ -148,6 +166,11 @@ border
   padding-bottom: 4rem !important;
 }
 
+// padding top
+.pdt-0 {
+  padding-top: 0rem !important;
+}
+
 .pdt-025 {
   padding-top: 0.25rem !important;
 }
@@ -170,6 +193,11 @@ border
 
 .pdt-4 {
   padding-top: 4rem !important;
+}
+
+// padding right
+.pdr-0 {
+  padding-right: 0 !important;
 }
 
 .pdr-025 {
@@ -196,6 +224,11 @@ border
   padding-right: 4rem !important;
 }
 
+// padding-left
+.pdl-0 {
+  padding-left: 0.25rem !important;
+}
+
 .pdl-025 {
   padding-left: 0.25rem !important;
 }
@@ -220,12 +253,17 @@ border
   padding-left: 4rem !important;
 }
 
+/* margins */
+.mg-0 {
+  margin: 0 !important;
+}
+
 .mg-025 {
-  padding: 0.25rem !important;
+  margin: 0.25rem !important;
 }
 
 .mg-05 {
-  padding: 0.5rem !important;
+  margin: 0.5rem !important;
 }
 
 .mg-1 {
@@ -244,8 +282,13 @@ border
   margin: 4rem !important;
 }
 
+/* margin on x-axis */
+.mgx-0 {
+  margin: 0.25rem 0 !important;
+}
+
 .mgx-025 {
-  margin: 0.25rem !important;
+  margin: 0.25rem 0 !important;
 }
 
 .mgx-05 {
@@ -266,6 +309,10 @@ border
 
 .mgx-4 {
   margin: 4rem 0 !important;
+}
+/* margin-y */
+.mgy-0 {
+  margin: 0 0 !important;
 }
 
 .mgy-025 {
@@ -292,6 +339,11 @@ border
   margin: 0 4rem !important;
 }
 
+/* margin-bottom */
+.mgb-0 {
+  margin-bottom: 0rem !important;
+}
+
 .mgb-025 {
   margin-bottom: 0.25rem !important;
 }
@@ -314,6 +366,11 @@ border
 
 .mgb-4 {
   margin-bottom: 4rem !important;
+}
+
+/* margin-top */
+.mgt-0 {
+  margin-top: 0rem !important;
 }
 
 .mgt-025 {
@@ -340,6 +397,11 @@ border
   margin-top: 4rem !important;
 }
 
+/* margin-right */
+.mgr-0 {
+  margin-right: 0rem !important;
+}
+
 .mgr-025 {
   margin-right: 0.25rem !important;
 }
@@ -362,6 +424,10 @@ border
 
 .mgr-4 {
   margin-right: 4rem !important;
+}
+/* margin-left */
+.mgl-0 {
+  margin-left: 0rem !important;
 }
 
 .mgl-025 {

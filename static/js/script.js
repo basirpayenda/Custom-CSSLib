@@ -1,12 +1,10 @@
-/*********************************** navbar **********************************/
 /*  navbar variables */
 let links = document.querySelectorAll("nav ul li a:not(:only-child)");
-let burger = document.querySelector(".nav_toggler");
+let burger = document.querySelector(".nav-toggler");
 let dropdown_btns = document.querySelectorAll(".dropdown_btn");
-
 /* Hamburger to X toggle and toggle navbar */
 burger.addEventListener("click", e => {
-  document.querySelector(".navbar_list").classList.toggle("toggle_navbar");
+  document.querySelector(".navbar-list").classList.toggle("toggle_navbar");
   e.currentTarget.classList.toggle("active");
 });
 
@@ -17,7 +15,7 @@ dropdown_btns.forEach(link => {
     const ownDropdown = e.currentTarget.nextElementSibling;
     ownDropdown.classList.toggle("show_dropdown");
 
-    document.querySelectorAll(".dropdown_btn + .dropdown_list").forEach(el => {
+    document.querySelectorAll(".dropdown_btn + .dropdown-list").forEach(el => {
       if (el !== ownDropdown) {
         el.classList.remove("show_dropdown");
         el.previousElementSibling.childNodes[1].classList.remove("fa-caret-up");
@@ -29,7 +27,7 @@ dropdown_btns.forEach(link => {
 /*  Clicking away from dropdown will remove the dropdown class */
 window.onclick = function(e) {
   if (!e.target.matches(".dropdown_btn")) {
-    var dropdowns = document.getElementsByClassName("dropdown_list");
+    var dropdowns = document.getElementsByClassName("dropdown-list");
     for (i = 0; i < dropdowns.length; i++) {
       if (dropdowns[i].classList.contains("show_dropdown")) {
         dropdowns[i].previousElementSibling.childNodes[1].classList.remove(

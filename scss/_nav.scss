@@ -1,71 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates|Montserrat:400,500,500i,600,700|Poppins|Rajdhani&display=swap");
+
+main {
+  // position relative is required for this tag to apply overflow in mobile browsers
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-top: 60px; /* to fill space taken by fixed-navbar */
+}
+
 /************************************** 
-            navbar_container
+            nav-container
 **************************************/
-// navbar_container Variables
+// nav-container Variables
 $nav-height: 60px;
 $nav-background: #563d7c;
-$white: #f3f3f3;
 $dd-line-height: 50px;
+$nav-link-color: #c9c1d6;
 
-// Outer navbar_container wrapper
-.navbar_container {
-  background: $nav-background;
-  padding: 0rem 1rem;
-  height: $nav-height;
-  z-index: 500;
-}
-.fixed_navbar {
+// Outer nav-container wrapper
+.fixed-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
 }
 
-.navbar {
+.navigation-bar {
+  /* mobile first design */
   display: flex;
   align-items: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background: $nav-background;
+  padding: 0rem 1rem;
   height: $nav-height;
   .logo {
-    a {
-      color: $white;
+    img {
+      width: 42px;
+      max-width: 100%;
     }
   }
-  nav {
-    .navbar_list {
+  .navbar {
+    .navbar-list {
+      margin: 0;
+      padding: 0;
       display: block;
       position: absolute;
       top: $nav-height;
       right: 0;
       width: 0vw;
       min-height: calc(100vh - 60px);
-      background-color: inherit;
-      transition: all 0.25s ease-out;
+      background-color: $nav-background;
+      transition: width 0.3s ease-out;
       text-align: center;
       list-style-type: none;
       // incase of overflow
       max-height: calc(100vh - 60px);
       overflow-y: auto;
-      a {
-        color: #ada2bd;
-        line-height: $nav-height;
-        padding: 1.25rem 0;
+      li {
+        .navbar-link {
+          display: inline-block;
+          color: $nav-link-color;
+          padding: 0;
+          line-height: $nav-height;
+          width: 100%;
+          height: 100%;
+          min-width: 100%;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        .navbar-btn {
+          height: $nav-height;
+          padding: 0;
+        }
+        &.active {
+          background-color: #513677;
+          .navbar-link {
+            color: #fff;
+          }
+        }
         &:hover {
-          color: $white;
+          .navbar-link {
+            color: #f3f3f3;
+          }
         }
       }
-      li:hover a {
-        // magic
-        color: $white;
-      }
       .dropdown {
-        .dropdown_list {
+        .dropdown-list {
+          margin: 0;
+          padding: 0;
+          margin-top: -0.5rem;
           a {
             color: #0a0a0a;
             line-height: $dd-line-height; // important
-          }
-          li {
             &:hover {
-              background-color: #f8f9fa;
+              background-color: #cccccc41;
             }
           }
         }
@@ -77,20 +106,23 @@ $dd-line-height: 50px;
   }
 }
 
-.nav_toggler {
+.nav-toggler {
   position: absolute;
-  right: 18px;
-  top: 16px;
+  /* border: 1px solid red; */
+  right: 12px;
+  top: 12px;
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
+  padding: 18px 40px 21px 6px;
+  box-shadow: inset 1px 1px 3px #a682dd;
+  border-radius: 3px;
   span,
   span:before,
   span:after {
     cursor: pointer;
     border-radius: 15px;
-    height: 5px;
+    height: 4px;
     width: 35px;
-    background: $white;
+    background: #f3f3f3;
     position: absolute;
     display: block;
     content: "";
@@ -102,6 +134,9 @@ $dd-line-height: 50px;
   }
   span:after {
     bottom: -10px;
+  }
+  &.active {
+    box-shadow: none;
   }
   &.active span {
     background-color: transparent;
@@ -125,16 +160,21 @@ $dd-line-height: 50px;
 .dropdown {
   position: relative;
   overflow: hidden;
-  .dropdown_list {
-    width: 95%;
-    margin: 0 auto;
+  .dropdown-list {
+    width: 90%;
+    margin: 0 auto !important;
     border-radius: 4px;
     max-height: 0;
     background-color: #ffffff;
     list-style: none;
     white-space: nowrap;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-shadow: 0 2px 1px #777;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+    }
   }
   .show_dropdown {
     max-height: 350px;
@@ -144,22 +184,32 @@ $dd-line-height: 50px;
                 Responsive Nav
 ********************************************************************/
 @media screen and (min-width: 768px) {
-  .nav_toggler {
+  /* others */
+  .nav-toggler {
     display: none;
   }
-  .navbar_container {
-    padding: 0;
+  .nav-container {
+    padding: 0 0.5rem;
   }
-  .navbar {
+  .navigation-bar {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding: 0 0.5rem;
+
     .logo {
+      /* center logo */
       display: flex;
       justify-content: center;
+      align-items: center;
       padding-left: 1rem;
+      width: 100%;
+      img {
+        width: 45px;
+        max-width: 100%;
+      }
     }
-    nav {
-      .navbar_list {
+    .navbar {
+      .navbar-list {
         position: static;
         display: flex;
         justify-content: center;
@@ -172,8 +222,12 @@ $dd-line-height: 50px;
         max-height: $nav-height;
         overflow-y: initial;
         li {
-          a {
-            padding: 0.75rem;
+          .navbar-link {
+            line-height: $nav-height;
+            padding: 0 0.75rem;
+          }
+          .navbar-btn {
+            border-radius: 0;
           }
         }
       }
@@ -184,15 +238,16 @@ $dd-line-height: 50px;
     position: relative;
     overflow: initial;
     white-space: nowrap;
-    .dropdown_list {
+    .dropdown-list {
       position: absolute; // magical importance
       display: none;
       background-color: #ffffff;
       border: 1px solid #d9d9d9;
       border-radius: 3px;
-      margin-top: -7px;
-      left: -0.3rem;
+      margin-top: -0.5rem !important;
+      left: -25%;
       width: auto;
+      min-width: 180px;
     }
     .show_dropdown {
       display: block;

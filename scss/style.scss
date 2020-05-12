@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
+  padding-top: 60px;
 }
 
 a {
@@ -30,9 +31,10 @@ a {
 @import "pagination";
 @import "carousel";
 @import "nav";
-@import 'form';
-@import 'product_card';
-@import 'badge';
+@import "form";
+@import "product_card";
+@import "badge";
+@import "./breadcrumb";
 
 .mx-auto {
   margin: 0 auto;

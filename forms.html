@@ -5,56 +5,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
   <script src="https://kit.fontawesome.com/987eff0098.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
   <div class="container">
-
-    <div class="input-wrapper">
-      <label for="id"> Firstname </label>
-      <input type="text" id="id" class="input-text" placeholder="John Doe">
+    <div class="row">
+      <div class="middle-6 large-6">
+        <div class="input-container ">
+          <label for="firstname">First Name</label>
+          <input type="text" class="input-text" id="firstname">
+        </div>
+      </div>
+      <div class="middle-6 large-6">
+        <div class="input-container">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="input-text" id="lastname">
+        </div>
+      </div>
     </div>
 
-    <div class="input-wrapper">
-      <label for="id"> Lastname </label>
-      <input type="text" id="id" class="input-text" placeholder="Eric Doe">
+    <!-- input[type='text'] -->
+    <div class="input-container">
+      <label for="education"> Education </label>
+      <input type="text" id="education" class="input-text" placeholder="John Doe">
+    </div>
+    <!-- input[type='select'] -->
+    <div class="input-container">
+      <label for="id"> Donation amount </label>
+      <select name="amount" id="amount" class="input-text">
+        <option disabled selected> Choose amount </option>
+        <option value="5">$5 -- Thank You</option>
+        <option value="10">$10 -- I like you</option>
+      </select>
     </div>
 
-    <div class="input-wrapper">
-
-      <label class="checked-wrapper" for="checkbox">
-        Check
-        <input type="checkbox" name="eng" id="checkbox">
+    <div class="input-container">
+      <p class="mgb-05">Courses</p>
+      <label class="checked-container" for="checkbox">
+        English
+        <input type="checkbox" name="eng" id="checkbox" checked>
         <span class="chexbox_box"></span>
       </label>
 
-      <label class="checked-wrapper" for="checkbox2">
-        Check2
+      <label class="checked-container" for="checkbox2">
+        French
         <input type="checkbox" name="eng" id="checkbox2">
         <span class="chexbox_box"></span>
       </label>
 
-      <label class="checked-wrapper" for="radio1">
+      <p class="mgt-1 mgb-05">Gender</p>
+      <label class="checked-container" for="radio1">
         Male
         <input type="radio" name="eng" id="radio1" checked>
         <span class="radio_box"></span>
       </label>
 
-      <label class="checked-wrapper" for="radio2">
+      <label class="checked-container" for="radio2">
         Female
         <input type="radio" name="eng" id="radio2">
         <span class="radio_box"></span>
       </label>
 
-      <label for="toggle" class="toggle-wrapper"> Active
+      <label for="toggle" class="toggle-container"> Active
         <input type="checkbox" name="toggle" id="toggle">
         <span class="toggle_box"></span>
       </label>
-
     </div>
+
 
 
   </div>

@@ -6,199 +6,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/987eff0098.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header class="navbar_container fixed_navbar">
-        <div class="navbar ">
-            <div class="logo">
-                <a href="#!">Logo</a>
-            </div>
-            <nav>
-                <div class="nav-mobile"><a class="nav_toggler" href="#!"><span></span></a></div>
-                <ul class="navbar_list">
-                    <li>
-                        <a href="#!">Home</a>
-                    </li>
-                    <li>
-                        <a href="#!">About</a>
+    <main>
+        <nav class="navigation-bar fixed-navbar">
+            <a href="#!" class="logo">
+                <img src="https://dyl80ryjxr1ke.cloudfront.net/p/assets/images/graphic-tutorial-basics@2x_095a9cca5cc0e30652af2a427cdfc3d9.png"
+                    alt="">
+            </a>
+            <div class="navbar">
+                <div class="nav-toggler">
+                    <span></span>
+                </div>
+                <ul class="navbar-list">
+                    <li class="active">
+                        <a href="#!" class="navbar-link">Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#!" class='dropdown_btn'>Services <i class="fas fa-caret-down"></i></a>
-                        <ul class="dropdown_list">
+                        <a href="#!" class='dropdown_btn navbar-link'>Blogs <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-list">
                             <li>
-                                <a href="#!">Web Design</a>
+                                <a href="#!">HTML, CSS</a>
                             </li>
                             <li>
-                                <a href="#!">Web Development</a>
+                                <a href="#!">JavaScript</a>
                             </li>
+                            <li>
+                                <a href="#!">Python</a>
+                            </li>
+                            <li>
+                                <a href="#!">Django</a>
+                            </li>
+                            <li>
+                                <a href="#!">Others</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#!" class='dropdown_btn navbar-link'>Portfolio <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-list">
+                            <li>
+                                <a href="#!">Download Resume</a>
+                            </li>
+                            <li>
+                                <a href="#!">My Works</a>
+                            </li>
+                            <li>
+                                <a href="#!">GitHub</a>
+                            </li>
+                            <li>
+                                <a href="#!">Code Pen</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="navbar-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="navbar-link">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-primary navbar-link">Sign-In</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-link button button-orange navbar-"><i class="fas fa-user"></i> Sign
+                            up</a>
                     </li>
                 </ul>
-                </li>
-                <li>
-                    <a href="#!">Pricing</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#!" class='dropdown_btn'>Portfolio <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown_list">
-                        <li>
-                            <a href="#!">Web Design</a>
-                        </li>
-                        <li>
-                            <a href="#!">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="#!">Graphic Design</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#!">Contact</a>
-                </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <br><br>
-    <br>
-    <main class="container mgb-3">
-        <!-- <div class="message message-primary">
+            </div>
+        </nav>
+        <div class="container mgb-3">
+            <!-- <div class="message message-primary">
             <span class="close">&times;</span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, aut.
         </div> -->
-        <!----------------------------- carousel  ----------------------------------->
-        <div class="carousel">
-            <i class="fas fa-chevron-left" id="prevBtn"></i>
-            <i class="fas fa-chevron-right" id="nextBtn"></i>
-            <div class="carousel-inner">
-                <div class="slide-item">
-                    <div class="caption">
-                        <h1>First Slide</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <!----------------------------- carousel  ----------------------------------->
+            <div class="carousel">
+                <i class="fas fa-chevron-left" id="prevBtn"></i>
+                <i class="fas fa-chevron-right" id="nextBtn"></i>
+                <div class="carousel-inner">
+                    <div class="slide-item">
+                        <div class="caption">
+                            <h1>First Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                        <img src="https://www.w3schools.com/bootstrap4/ny.jpg" width="100%" alt="">
                     </div>
-                    <img src="https://www.w3schools.com/bootstrap4/ny.jpg" width="100%" alt="">
-                </div>
-                <div class="slide-item">
-                    <div class="caption">
-                        <h1>Second Slide</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div> <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="" width="100%">
-                </div>
-                <div class="slide-item">
-                    <div class="caption">
-                        <h1>Third Slide</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div> <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" width="100%" alt="">
-                </div>
-            </div>
-            <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-        <h1 class="heading-2">Heading 2</h1>
-        <!-- rows -->
-        <div class="row">
-            <div class="medium-4 extra-large-3 extra-small-12 small-12">
-                <div class="card">
-                    <img src="https://picsum.photos/seed/picsum/200/200" alt="">
-                    <div class="card-content">
-                        <h2 class="card-title">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
-                            rem
-                            ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
-                            labore quasi voluptas debitis sunt accusamus.</p>
-                        <button class="button button-full button-blue mgt-05">View</button>
+                    <div class="slide-item">
+                        <div class="caption">
+                            <h1>Second Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div> <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="" width="100%">
+                    </div>
+                    <div class="slide-item">
+                        <div class="caption">
+                            <h1>Third Slide</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div> <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" width="100%" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="medium-4 extra-large-3 extra-small-12 small-12">
-                <div class="card">
-                    <img src="https://picsum.photos/seed/picsum/200/200" alt="">
-                    <div class="card-content">
-                        <h2 class="card-title">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
-                            rem
-                            ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
-                            labore quasi voluptas debitis sunt accusamus.</p>
-                        <button class="button button-full button-blue mgt-05">View</button>
-                    </div>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
-            <div class="medium-4 extra-large-3 extra-small-12 small-12">
-                <div class="card">
-                    <img src="https://picsum.photos/seed/picsum/200/200" alt="">
-                    <div class="card-content">
-                        <h2 class="card-title">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
-                            rem
-                            ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
-                            labore quasi voluptas debitis sunt accusamus.</p>
-                        <button class="button button-full button-blue mgt-05">View</button>
+            <!-- rows -->
+            <div class="row">
+                <div class="medium-4 extra-large-3 extra-small-12 small-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/200/200" alt="">
+                        <div class="card-content">
+                            <h2 class="card-title">Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
+                                rem
+                                ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
+                                labore quasi voluptas debitis sunt accusamus.</p>
+                            <button class="button button-full button-blue mgt-05">View</button>
+                        </div>
                     </div>
                 </div>
+                <div class="medium-4 extra-large-3 extra-small-12 small-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/200/200" alt="">
+                        <div class="card-content">
+                            <h2 class="card-title">Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
+                                rem
+                                ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
+                                labore quasi voluptas debitis sunt accusamus.</p>
+                            <button class="button button-full button-blue mgt-05">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-4 extra-large-3 extra-small-12 small-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/200/200" alt="">
+                        <div class="card-content">
+                            <h2 class="card-title">Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
+                                rem
+                                ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
+                                labore quasi voluptas debitis sunt accusamus.</p>
+                            <button class="button button-full button-blue mgt-05">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-4 extra-large-3 extra-small-12 small-12">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/picsum/200/200" alt="">
+                        <div class="card-content">
+                            <h2 class="card-title">Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
+                                rem
+                                ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
+                                labore quasi voluptas debitis sunt accusamus.</p>
+                            <button class="button button-full button-blue mgt-05">View</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="medium-4 extra-large-3 extra-small-12 small-12">
-                <div class="card">
-                    <img src="https://picsum.photos/seed/picsum/200/200" alt="">
-                    <div class="card-content">
-                        <h2 class="card-title">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, laborum quibusdam
-                            rem
-                            ipsum ullam aliquam illum quidem quae, officiis voluptatibus esse. Eveniet ipsam libero
-                            labore quasi voluptas debitis sunt accusamus.</p>
-                        <button class="button button-full button-blue mgt-05">View</button>
-                    </div>
-                </div>
+            <!-- carousel ends -->
+            <!----------------------------- .image  ----------------------------------->
+            <img src="https://images.unsplash.com/photo-1549876612-f9ea53d45266?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                alt="random photo" class="image width-100">
+            <!----------------------------- .vin  ----------------------------------->
+            <div class="vin">
+                <h2 class="heading-2">Heading 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem quae officiis aliquam
+                    culpa
+                    ut dolor ullam non. Saepe velit temporibus tempora veritatis atque praesentium! Lorem ipsum dolor
+                    sit
+                    amet consectetur adipisicing elit. Aliquid nemo iste qui enim excepturi nihil ea magnam illo fuga,
+                    culpa
+                    reprehenderit dolor, eligendi sint. Amet, cumque in excepturi nulla rerum quia minima. Optio
+                    possimus,
+                    odio beatae deserunt expedita consequuntur. Aliquid ut nemo quidem magnam. Accusantium ipsa
+                    exercitationem quod expedita delectus.</p>
             </div>
 
-        </div>
-        <!-- carousel ends -->
-        <!----------------------------- .image  ----------------------------------->
-        <img src="https://images.unsplash.com/photo-1549876612-f9ea53d45266?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-            alt="random photo" class="image width-100">
-        <!----------------------------- .vin  ----------------------------------->
-        <div class="vin">
-            <h2 class="heading-2">Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem quae officiis aliquam culpa
-                ut dolor ullam non. Saepe velit temporibus tempora veritatis atque praesentium! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Aliquid nemo iste qui enim excepturi nihil ea magnam illo fuga, culpa
-                reprehenderit dolor, eligendi sint. Amet, cumque in excepturi nulla rerum quia minima. Optio possimus,
-                odio beatae deserunt expedita consequuntur. Aliquid ut nemo quidem magnam. Accusantium ipsa
-                exercitationem quod expedita delectus.</p>
-        </div>
+            <!----------------------------- .tab  ----------------------------------->
+            <h2>Tabs</h2>
+            <p>Click on the x button in the top right corner to close the current tab:</p>
 
-        <!----------------------------- .tab  ----------------------------------->
-        <h2>Tabs</h2>
-        <p>Click on the x button in the top right corner to close the current tab:</p>
-
-        <div class="tab">
-            <a onclick='openTab(event, "javascript")'>JavaScript</a>
-            <a onclick='openTab(event, "python")' id='default'>Python</a>
-            <a onclick='openTab(event, "django")'>Django</a>
-        </div>
-        
-        <div class="tab-contents">
-            <div id="javascript" class='tab-content'>
-                <h1>JavaScript</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
+            <div class="tab">
+                <a onclick='openTab(event, "javascript")'>JavaScript</a>
+                <a onclick='openTab(event, "python")' id='default'>Python</a>
+                <a onclick='openTab(event, "django")'>Django</a>
             </div>
-        
-            <div id="python" class='tab-content'>
-                <h1>Python</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
-            </div>    
-        
-            <div id="django" class='tab-content'>
-                <h1>Django</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio, sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi deleniti, dolore fuga esse adipisci.</p>
-            </div>   
-        </div>        
+
+            <div class="tab-contents">
+                <div id="javascript" class='tab-content'>
+                    <h1>JavaScript</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio,
+                        sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi
+                        deleniti,
+                        dolore fuga esse adipisci.</p>
+                </div>
+
+                <div id="python" class='tab-content'>
+                    <h1>Python</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio,
+                        sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi
+                        deleniti,
+                        dolore fuga esse adipisci.</p>
+                </div>
+
+                <div id="django" class='tab-content'>
+                    <h1>Django</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates optio corrupti at distinctio,
+                        sint praesentium! Pariatur tenetur id voluptatibus natus sint voluptates nisi aperiam modi
+                        deleniti,
+                        dolore fuga esse adipisci.</p>
+                </div>
+            </div>
+        </div>
     </main>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

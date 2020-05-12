@@ -25,6 +25,7 @@
   display: flex;
   display: ms-flex;
   flex-wrap: wrap;
+  /* TODO: you may need to remove below lines when in case of overflow inputs  */
   margin-right: -1rem;
   margin-left: -1rem;
 }
@@ -81,7 +82,7 @@
   padding: 0 1rem;
   width: 100%;
   /* TODO: `display:flex` helps equal height columns */
-  display: flex;
+  // display: flex;
 }
 
 @media screen and (max-width: 576px) {

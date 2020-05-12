@@ -1,12 +1,14 @@
 label {
   display: inline-block;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.25rem;
 }
-.input-wrapper,
-.toggle-wrapper {
+.input-container,
+.toggle-container {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 0.25rem 0 0.5rem;
   user-select: none;
+  line-height: 1;
+  width: 100%;
   .input-text {
     min-height: 34px;
     padding: 6px 8px;
@@ -26,15 +28,18 @@ label {
       outline: 0;
     }
   }
-  .toggle-wrapper {
+  .toggle-container {
     padding-left: 45px;
+    margin: 0.1rem 0 1.5rem 0;
+
     .toggle_box {
       position: absolute;
       top: 0;
       left: 0;
       width: 35px;
       height: 19px;
-      background-color: rgba(35, 126, 187, 0.74);
+      margin-top: -2px;
+      background-color: rgba(180, 175, 175, 0.74);
       border-radius: 1rem;
       &:after {
         content: "";
@@ -53,13 +58,16 @@ label {
       height: 0px;
       opacity: 0;
     }
+    input[type="checkbox"]:checked ~ .toggle_box {
+      background-color: #5c9fcd;
+    }
     input[type="checkbox"]:checked ~ .toggle_box:after {
       left: 18px;
     }
   }
 }
 
-.checked-wrapper {
+.checked-container {
   position: relative;
   display: block;
   padding-left: 25px;
@@ -68,7 +76,7 @@ label {
   border-radius: 2px;
   &:hover .chexbox_box,
   &:hover .radio_box {
-    background-color: rgba(7, 102, 165, 0.883);
+    background-color: rgb(49, 129, 182);
   }
 
   label {
